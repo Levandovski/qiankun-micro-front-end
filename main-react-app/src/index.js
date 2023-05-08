@@ -1,15 +1,22 @@
-import { registerMicroApps, start, setDefaultMountApp } from 'qiankun';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { registerMicroApps, start } from "qiankun";
+import microApps from "./micro-apps";
 
-registerMicroApps([
-  {
-    name: "micro-react1",
-    entry:"//localhost:3002",
-    container: "#root",
-    activeRule: "/micro-react1",
-    props: {RouterBase: "/micro-react1"}
-  }
-])
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
-setDefaultMountApp("/micro-react1");
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+
+registerMicroApps(microApps);
 
 start();
