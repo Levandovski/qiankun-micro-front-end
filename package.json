@@ -6,12 +6,12 @@
   "scripts": {
     "install": "npm-run-all --serial install:*",
     "install:main-react-app": "cd main-react-app && npm i",
-    "install:micro-react1": "cd micro-react1 && npm i",
-    "install:micro-react2": "cd micro-react2 && npm i",
+    "install:micro-react-sub-app1": "cd micro-react-sub-app1 && npm i",
+    "install:micro-react-sub-app2": "cd micro-react-sub-app2 && npm i",
     "start": "npm-run-all --parallel start:*",
     "start:main-react-app": "cd main-react-app && npm start",
-    "start:micro-react1": "cd micro-react1 && npm start",
-    "start:micro-react2": "cd micro-react2 && npm start"
+    "start:micro-react-sub-app1": "cd micro-react-sub-app1 && npm start",
+    "start:micro-react-sub-app2": "cd micro-react-sub-app2 && npm start"
   },
   "repository": {
     "type": "git",
