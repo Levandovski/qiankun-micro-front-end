@@ -4,9 +4,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 
+let rootGlobal = ReactDOM.createRoot(document.getElementById("root"));
+
 if (!window.__POWERED_BY_QIANKUN__) {
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-  root.render(<App />);
+  rootGlobal.render(<App />);
 }
 
 export async function bootstrap() {
@@ -14,13 +15,15 @@ export async function bootstrap() {
 }
 
 export async function mount(props) {
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-
-  root.render(<App />);
+  const { container } = props;
+  rootGlobal = ReactDOM.createRoot(
+    container
+      ? container.querySelector("#root")
+      : document.querySelector("#root")
+  );
+  rootGlobal.render(<App />);
 }
 
 export async function unmount(props) {
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-  console.log("AQUIII FUI");
-  root.unmount(<App />);
+  rootGlobal.unmount();
 }
