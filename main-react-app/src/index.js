@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { registerMicroApps, start } from "qiankun";
+import { registerMicroApps, setDefaultMountApp, start } from "qiankun";
 import microApps from "./micro-apps";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -18,5 +18,7 @@ root.render(
 reportWebVitals();
 
 registerMicroApps(microApps);
+
+setDefaultMountApp("/micro-react1");
 
 start();
