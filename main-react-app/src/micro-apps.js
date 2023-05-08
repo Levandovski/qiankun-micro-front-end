@@ -1,9 +1,9 @@
 const microApps = [
   {
-    name: "micro-react1",
+    name: "micro-react-sub-app1",
     entry: "//localhost:3002/",
     container: "#subapp-viewport",
-    activeRule: "/micro-react1",
+    activeRule: "/micro-react-sub-app1",
   },
 ];
 

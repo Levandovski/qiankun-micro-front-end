@@ -1,20 +1,21 @@
 import React from "react";
-import "./styles.css";
 import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import { Container, Header } from "./styles";
 
 const App = () => {
   return (
     <>
-      <div className="container">
+      <Container>
         <div className="navbar">
           <Router>
-            <div className="header">
+            <Header>
               <NavLink to="/">Home-Page</NavLink>
-              <NavLink to="/micro-react1">Home-Page</NavLink>
-            </div>
+              <NavLink to="/micro-react-sub-app1">React Sub App 1</NavLink>
+              <NavLink to="/micro-react-sub-app2">React Sub App 1</NavLink>
+            </Header>
           </Router>
         </div>
-      </div>
+      </Container>
       <div id="subapp-viewport"></div>
     </>
   );

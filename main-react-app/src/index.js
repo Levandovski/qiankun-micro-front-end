@@ -19,6 +19,6 @@ reportWebVitals();
 
 registerMicroApps(microApps);
 
-setDefaultMountApp("/micro-react1");
+setDefaultMountApp("/micro-react-sub-app1");
 
 start();
