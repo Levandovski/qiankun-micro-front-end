@@ -1,17 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./public-path";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { Provider } from "react-redux";
+import { PersistGate } from "reduxjs-toolkit-persist/integration/react";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+let rootGlobal = ReactDOM.createRoot(document.getElementById("root"));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+if (!window.__POWERED_BY_QIANKUN__) {
+  rootGlobal.render(<App />);
+}
+
+export async function bootstrap() {
+  console.log("react app bootstraped");
+}
+
+export async function mount(props) {
+  const { container, store, persistor } = props;
+  rootGlobal = ReactDOM.createRoot(
+    container
+      ? container.querySelector("#root")
+      : document.querySelector("#root")
+  );
+  rootGlobal.render(
+    <>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <App />
+        </PersistGate>
+      </Provider>
+    </>
+  );
+}
+
+export async function unmount(props) {
+  rootGlobal.unmount();
+}

@@ -3,6 +3,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import { Provider } from "react-redux";
+import { PersistGate } from "reduxjs-toolkit-persist/integration/react";
 
 let rootGlobal = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -15,13 +17,21 @@ export async function bootstrap() {
 }
 
 export async function mount(props) {
-  const { container } = props;
+  const { container, store, persistor } = props;
   rootGlobal = ReactDOM.createRoot(
     container
       ? container.querySelector("#root")
       : document.querySelector("#root")
   );
-  rootGlobal.render(<App />);
+  rootGlobal.render(
+    <>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <App />
+        </PersistGate>
+      </Provider>
+    </>
+  );
 }
 
 export async function unmount(props) {

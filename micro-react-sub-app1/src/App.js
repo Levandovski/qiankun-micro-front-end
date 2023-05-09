@@ -1,13 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useSelector } from "react-redux";
 
 function App() {
+  const { authenticate } = useSelector((state) => state.authenticate);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Sub App 1: Status : {authenticate ? "Autenticado" : "Não Autenticado"}
         </p>
         <a
           className="App-link"

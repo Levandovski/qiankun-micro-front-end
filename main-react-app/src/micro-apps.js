@@ -1,9 +1,25 @@
+import { persistor, store } from "./store/store";
+
 const microApps = [
   {
     name: "micro-react-sub-app1",
     entry: "//localhost:3002/",
     container: "#subapp-viewport",
     activeRule: "/micro-react-sub-app1",
+    props: {
+      store,
+      persistor,
+    },
+  },
+  {
+    name: "micro-react-sub-app2",
+    entry: "//localhost:3003/",
+    container: "#subapp-viewport",
+    activeRule: "/micro-react-sub-app2",
+    props: {
+      store,
+      persistor,
+    },
   },
 ];
 

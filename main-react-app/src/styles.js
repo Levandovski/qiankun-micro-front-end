@@ -8,6 +8,8 @@ export const Container = styled.div`
   height: 50px;
   background-color: #7842f5;
   position: fixed;
+  top: 0;
+  left: 0;
 `;
 
 export const Header = styled.div`
@@ -16,7 +18,6 @@ export const Header = styled.div`
   justify-content: space-between;
   width: 500px;
   height: 50px;
-
   a {
     height: 100%;
     display: flex;
