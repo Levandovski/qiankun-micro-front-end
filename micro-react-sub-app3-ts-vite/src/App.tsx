@@ -1,7 +1,8 @@
-import { Container, Content } from "./App";
+import React from "react";
+import { Container, Content } from "./styles";
 import { useSelector } from "react-redux";
 
-function App() {
+const App: React.FC = () => {
   const { authenticate } = useSelector((state: any) => state.authenticate);
   return (
     <Container>
@@ -13,6 +14,6 @@ function App() {
       </Content>
     </Container>
   );
-}
+};
 
 export default App;
