@@ -7,10 +7,8 @@ const App: React.FC = () => {
   return (
     <Container>
       <Content>
-        <h1>CRA + React + Typescript</h1>
-        <p>
-          Sub App 4: Status : {authenticate ? "Autenticado" : "Não Autenticado"}
-        </p>
+        <h1>Sub App 4: CRA + React + Typescript</h1>
+        <p>Status Redux: {authenticate ? "Autenticado" : "Não Autenticado"}</p>
       </Content>
     </Container>
   );

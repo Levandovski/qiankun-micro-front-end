@@ -7,10 +7,8 @@ const App = () => {
   return (
     <Container>
       <Content>
-        <h1>CRA + React + JS</h1>
-        <p>
-          Sub App 1: Status : {authenticate ? "Autenticado" : "Não Autenticado"}
-        </p>
+        <h1>Sub App 1: CRA + React + JS</h1>
+        <p>Status Redux: {authenticate ? "Autenticado" : "Não Autenticado"}</p>
       </Content>
     </Container>
   );
