@@ -16,8 +16,10 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 500px;
+  min-width: 500px;
+  width: auto;
   height: 50px;
+
   a {
     height: 100%;
     display: flex;

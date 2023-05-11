@@ -21,6 +21,16 @@ const microApps = [
       persistor,
     },
   },
+  {
+    name: "micro-react-sub-app3-ts-vite",
+    entry: "//localhost:3004/",
+    container: "#subapp-viewport",
+    activeRule: "/micro-react-sub-app3",
+    props: {
+      store,
+      persistor,
+    },
+  },
 ];
 
 export default microApps;
