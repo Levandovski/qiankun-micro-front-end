@@ -41,3 +41,7 @@ https://www.npmjs.com/package/react-app-rewired
 ### As vite does not use webpack it is necessary to use a plugin. The plugin used for this is vite-plugin-qiankun
 
 https://github.com/tengmaoqing/vite-plugin-qiankun
+
+##### For more details visit the official qiankun documentation link
+
+https://qiankun.umijs.org/
