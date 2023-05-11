@@ -28,6 +28,7 @@ const App = () => {
               <NavLink to="/micro-react-sub-app1">React Sub App 1</NavLink>
               <NavLink to="/micro-react-sub-app2">React Sub App 2</NavLink>
               <NavLink to="/micro-react-sub-app3">React Sub App 3</NavLink>
+              <NavLink to="/micro-react-sub-app4">React Sub App 4</NavLink>
             </Header>
           </Router>
         </div>

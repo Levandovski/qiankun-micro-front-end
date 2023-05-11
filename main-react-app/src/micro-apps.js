@@ -31,6 +31,16 @@ const microApps = [
       persistor,
     },
   },
+  {
+    name: "micro-react-sub-app4-ts-cra",
+    entry: "//localhost:3005/",
+    container: "#subapp-viewport",
+    activeRule: "/micro-react-sub-app4",
+    props: {
+      store,
+      persistor,
+    },
+  },
 ];
 
 export default microApps;

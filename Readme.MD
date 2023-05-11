@@ -2,11 +2,17 @@
 
 ### Project adapted for version 18 of react
 
-#### main-react-app
+### In this project I configure qiankun integration with all types below
 
-#### micro-react1
+#### main-react-app =>>> Main-App (JS)
 
-#### micro-react2
+#### micro-react-sub-app1 =>>> Sub-App-Micro (JS) (CRA)
+
+#### micro-react-sub-app2 =>>> > Sub-App-Micro (JS) (CRA)
+
+#### micro-react-sub-app3-ts-vite =>>> > Sub-App-Micro (Typescript) (Vite)
+
+#### micro-react-sub-app4-ts-cra =>>> > Sub-App-Micro (Typescript) (CRA)
 
 ### Installing all dependencies
 

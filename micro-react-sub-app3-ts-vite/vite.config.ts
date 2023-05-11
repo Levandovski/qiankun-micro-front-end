@@ -14,5 +14,6 @@ export default defineConfig({
   server: {
     port: 3004,
     origin: "http://localhost:3004",
+    open: false,
   },
 });
