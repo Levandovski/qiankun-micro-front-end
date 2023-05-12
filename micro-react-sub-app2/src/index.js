@@ -33,6 +33,6 @@ export async function mount(props) {
   );
 }
 
-export async function unmount(props) {
+export async function unmount() {
   rootGlobal.unmount();
 }

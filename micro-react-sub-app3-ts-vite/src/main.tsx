@@ -40,8 +40,8 @@ renderWithQiankun({
   async bootstrap() {
     console.log("Project Started!");
   },
-  async unmount(props: any) {
+  async unmount() {
     rootGlobal.unmount();
   },
-  async update(props: any) {},
+  async update() {},
 });

@@ -15,7 +15,13 @@
     "start:micro-react-sub-app1": "cd micro-react-sub-app1 && npm start",
     "start:micro-react-sub-app2": "cd micro-react-sub-app2 && npm start",
     "start:micro-react-sub-app3-ts-vite": "cd micro-react-sub-app3-ts-vite && npm run dev",
-    "start:micro-react-sub-app4-ts-cra": "cd micro-react-sub-app4-ts-cra && npm start"
+    "start:micro-react-sub-app4-ts-cra": "cd micro-react-sub-app4-ts-cra && npm start",
+    "build": "npm-run-all build:*",
+    "build:main-react-app": "cd main-react-app && npm run build",
+    "build:micro-react-sub-app1": "cd micro-react-sub-app1 && npm run build",
+    "build:micro-react-sub-app2": "cd micro-react-sub-app2 && npm run build",
+    "build:micro-react-sub-app3-ts-vite": "cd micro-react-sub-app3-ts-vite && npm run build",
+    "build:micro-react-sub-app4-ts-cra": "cd micro-react-sub-app4-ts-cra && npm run build"
   },
   "repository": {
     "type": "git",
