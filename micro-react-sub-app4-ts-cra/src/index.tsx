@@ -38,7 +38,7 @@ export async function mount(props: any) {
   );
 }
 
-export async function unmount(props: any) {
+export async function unmount() {
   rootGlobal.unmount();
 }
 
